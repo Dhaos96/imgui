@@ -6,7 +6,12 @@ project "ImGui"
 	targetdir ("Binaries/" .. OutputDir .. "/%{prj.name}")
 	objdir ("Binaries/" .. OutputDir .. "/%{prj.name}")
 
-	files {"*.cpp", "*.h"}
+	files {"*.cpp", "*.h",
+
+		--backends
+		"backends/imgui_impl_glfw.h",
+		"backends/imgui_impl_opengl3.h"
+	}
 
 	filter "system:windows"
 		systemversion "latest"
