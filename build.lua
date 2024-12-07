@@ -13,6 +13,8 @@ project "ImGui"
 		"backends/imgui_impl_opengl3.h"
 	}
 
+	includedirs{"../imgui"}
+
 	filter "system:windows"
 		systemversion "latest"
 		cppdialect "C++17"
